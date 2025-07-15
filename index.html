@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixelFrame Photography</title>
+  <link rel="stylesheet" href="photo.css" />
+</head>
+<body>
+  <header>
+  <h1>PixelFrame Photography</h1>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <nav id="dropdownMenu" class="dropdown-menu">
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+  <section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p>
+    I'm a passionate professional photographer capturing moments that matter. 
+    Specializing in portraits, events, and creative art.
+  </p>
+  <a href="#gallery" class="btn">See My Work</a>
+</section>
+
+
+
+  <section id="gallery" class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://images.pexels.com/photos/305086/pexels-photo-305086.jpeg" alt="Gallery Photo" onclick="openLightbox(this)">
+      <img src="https://images.pexels.com/photos/442573/pexels-photo-442573.jpeg" alt="Gallery Photo" onclick="openLightbox(this)">
+      <img src="https://images.pexels.com/photos/108148/pexels-photo-108148.jpeg" alt="Gallery Photo" onclick="openLightbox(this)">
+      <img src="https://images.pexels.com/photos/248519/pexels-photo-248519.jpeg" alt="Gallery Photo" onclick="openLightbox(this)">
+    </div>
+  </section>
+
+  <section id="contact" class="color-section">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Large view" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PixelFrame Photography</p>
+  </footer>
+
+  <script src="photo.js"></script>
+</body>
+</html>
